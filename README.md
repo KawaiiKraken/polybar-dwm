@@ -1,7 +1,7 @@
 # dwm - dynamic window manager
-============================
 why dwm? its extremely fast, stable and has lots of patches.
 
+My Current Config
 ![screenshot](https://github.com/KawaiiKraken/polybar-dwm/blob/master/myconfig.png "My Config")
 
 # Included Patches
@@ -13,9 +13,10 @@ why dwm? its extremely fast, stable and has lots of patches.
 - restoreafterrestart
 - statuscmd (also might be removed)
 
-# Requirements (to add to normal dwm requirements)
+# Dependencies (in addition to normal dwm)
 ------------
-- yajl (small C JSON library)
+- yajl
+- polybar-dwm-module
 
 Installation
 ------------
@@ -40,16 +41,8 @@ OR
 
 use xrandr --output in .xinitrc (might not work in all dispaly configs)
 
-- In order to display status info in the bar, you can do something
-like this in your .xinitrc:
-
-    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-    do
-    	sleep 1
-    done &
-    exec dwm
-
 
 Configuration
 -------------
-The configuration of dwm is done by editing config.h and running make install again.
+- The configuration of dwm is done by editing config.h and running make install again.
+- polybar-dwm-module is configured in .config/polybar/config
