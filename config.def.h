@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
-static const int showbar            = 0;        /* 0 means no bar */
+static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
@@ -102,6 +102,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc -f /home/kraken/screenshots/")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc toggle")}, //custom keybind
 	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc next")}, //custom keybind
+	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("mpc volume +10")}, //custom keybind
+	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("mpc volume -10")}, //custom keybind
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases")}, //custom keybind
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
