@@ -1,7 +1,6 @@
-# dwm - dynamic window manager
-why dwm? its extremely fast, stable and has lots of patches.
+# polybar-dwm - dwm with polybar support
 
-My Current Config
+
 ![screenshot](https://github.com/KawaiiKraken/polybar-dwm/blob/master/myconfig.png "My Config")
 
 # Included Patches
