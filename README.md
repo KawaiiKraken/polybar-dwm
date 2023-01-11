@@ -5,16 +5,21 @@
 
 # Included Patches
 - anybar-polybar-tray-fix
-- fullgaps
+- fullgaps (can be disabled in config.h)
 - ipc
 - restartsig
 - restoreafterrestart
-- a custom patch to prevent weirdness and add togglebar to polybar
+- anybar-togglebar (custom patch)
+- minor changes to stop weird behaviour with polybar
 
-# Dependencies (in addition to normal dwm)
+# Dependencies
 ------------
 - yajl
 - polybar-dwm-module
+- freetype2
+- libxft
+- libxinerama
+- libx11
 
 Installation
 ------------

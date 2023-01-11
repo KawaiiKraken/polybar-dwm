@@ -73,7 +73,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	/*{ MODKEY,                       XK_b,      togglebar,      {0} },*/
+  { MODKEY|ShiftMask,             XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	/*{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },*/
@@ -99,14 +99,14 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,             	        XK_n, shiftview,           {.i = +1 } },
 	{ MODKEY,	                      XK_b, shiftview,           {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc -f /home/kraken/screenshots/")}, //custom keybind
+//	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc -f /home/kraken/screenshots/")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc toggle")}, //custom keybind
 	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc next")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("mpc volume +10")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("mpc volume -10")}, //custom keybind
-	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases")}, //custom keybind
-	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
-	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
+//	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases")}, //custom keybind
+//	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
+//	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
