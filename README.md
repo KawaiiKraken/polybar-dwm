@@ -7,10 +7,9 @@
 - anybar-polybar-tray-fix
 - fullgaps
 - ipc
-- notitle (might remove as it doesnt affect polybar)
 - restartsig
 - restoreafterrestart
-- statuscmd (also might be removed)
+- a custom patch to prevent weirdness and add togglebar to polybar
 
 # Dependencies (in addition to normal dwm)
 ------------
