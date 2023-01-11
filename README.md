@@ -45,6 +45,16 @@ OR
 use xrandr --output in .xinitrc (might not work in all dispaly configs)
 
 
+Running polybar
+-----------
+Add the following line to the top of your .xinitrc:
+      
+    $(sleep 5 && $HOME/polybar-dwm/bar.sh) &
+
+Changing the sleep time is not recommended for consistent results.
+
+
+
 Configuration
 -------------
 - The configuration of dwm is done by editing config.h and running make install again.
