@@ -788,8 +788,6 @@ drawbar(Monitor *m)
 	unsigned int i, occ = 0, urg = 0;
 	Client *c;
 
-	if (!m->showbar)
-		return;
 
 	/* draw status first so it can be overdrawn by tags later */
 	if (m == selmon) { /* status is only drawn on selected monitor */ //comment out to draw on both monitors its jank tho
@@ -1217,6 +1215,7 @@ manage(Window w, XWindowAttributes *wa)
 void
 managealtbar(Window win, XWindowAttributes *wa)
 {
+
 	Monitor *m;
 	if (!(m = recttomon(wa->x, wa->y, wa->width, wa->height)))
 		return;
@@ -2076,6 +2075,7 @@ togglebar(const Arg *arg)
 	if (!selmon->traywin)
 		scantray();
 	selmon->showbar = !selmon->showbar;
+  spawnbar();
 	updatebarpos(selmon);
 	XMoveResizeWindow(dpy, selmon->barwin, selmon->wx, selmon->by, selmon->ww, selmon->bh);
 	XMoveResizeWindow(dpy, selmon->traywin, selmon->tx, selmon->by, selmon->tw, selmon->bh);
