@@ -25,7 +25,7 @@
 Installation
 ------------
 
-    make clean install`
+    make clean install
 
 
 Running dwm
