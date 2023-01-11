@@ -25,19 +25,19 @@
 Installation
 ------------
 
-    `make clean install``
+    make clean install`
 
 
 Running dwm
 -----------
 Add the following line to your .xinitrc to start dwm using startx:
 
-    `exec dwm`
+    exec dwm
 
 In order to connect dwm to a specific display, make sure that
 the DISPLAY environment variable is set correctly, e.g.:
 
-    `DISPLAY=foo.bar:1 exec dwm`
+    DISPLAY=foo.bar:1 exec dwm
 
 (This will start dwm on display :1 of the host foo.bar.)
 
@@ -50,7 +50,7 @@ Running polybar
 -----------
 Add the following line to the top of your .xinitrc:
       
-    `$(sleep 5 && $HOME/polybar-dwm/bar.sh) &`
+    $(sleep 5 && $HOME/polybar-dwm/bar.sh) &
 
 Changing the sleep time is not recommended for consistent results.
 
