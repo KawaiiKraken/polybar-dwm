@@ -1,14 +1,14 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 4;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
 static const char *altbarcmd        = "$HOME/dwm/bar.sh & "; /* Alternate bar launch command */
-static const unsigned int gappx     = 48;        /* gaps between windows */
+static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const char *fonts[]          = { "terminus:size=20", "font-awesome:size=20", "noto-fonts-emoji:size=20", "ttf-joypixels:size=20"  };
 static const char dmenufont[]       = "terminus:size=20";
@@ -107,6 +107,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases")}, //custom keybind
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
+	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("rbash")}, //custom keybind
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)

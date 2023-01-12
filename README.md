@@ -48,11 +48,8 @@ use xrandr --output in .xinitrc (might not work in all dispaly configs)
 
 Running polybar
 -----------
-Add the following line to the top of your .xinitrc:
-      
-    $(sleep 5 && $HOME/polybar-dwm/bar.sh) &
-
-Changing the sleep time is not recommended for consistent results.
+ADD NOTHING TO XINITRC
+polybar will run with dwm via bar.sh, if your bar is configured differently you can change it there
 
 
 
