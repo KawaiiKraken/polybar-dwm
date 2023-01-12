@@ -1469,6 +1469,8 @@ restoreSession(void)
 void
 quit(const Arg *arg)
 {
+  system("if pgrep '^polybar' > /dev/null; then pkill --signal sigterm polybar & sleep 1; fi");
+
 	if(arg->i) restart = 1;
 	running = 0;
 
