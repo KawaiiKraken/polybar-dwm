@@ -108,6 +108,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("rbash")}, //custom keybind
+	{ MODKEY,                       XK_F4,      spawn,         SHCMD("playerctl play-pause")}, //custom keybind
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
