@@ -2,7 +2,7 @@
 *patched to work with polybar-dwm-module which you can find here
  https://github.com/mihirlad55/polybar-dwm-module
 
-![screenshot](https://github.com/KawaiiKraken/polybar-dwm/blob/master/myconfig.png "My Config")
+![screenshot](https://github.com/KawaiiKraken/polybar-dwm/blob/master/myconfig2.png "My Config")
 
 # Included Patches
 - anybar-polybar-tray-fix
