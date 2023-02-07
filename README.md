@@ -1,17 +1,19 @@
 # polybar-dwm - dwm with polybar support*
- this is patched to work with polybar-dwm-module which you can find here
+patched to work with polybar-dwm-module which you can find here
  https://github.com/mihirlad55/polybar-dwm-module
 
 ![screenshot](https://github.com/KawaiiKraken/polybar-dwm/blob/master/myconfig.png "My Config")
 
 # Included Patches
 - anybar-polybar-tray-fix
-- fullgaps (can be disabled in config.h)
+- fullgaps
 - ipc
 - restartsig
 - restoreafterrestart
+- noborder 
+- tagshift
 - anybar-togglebar (custom patch)
-- minor changes to stop weird behaviour with polybar
+- a few minor changes to prevent weird behaviour with polybar
 
 # Dependencies
 ------------

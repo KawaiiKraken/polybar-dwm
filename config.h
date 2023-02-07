@@ -1,22 +1,22 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
-static const char *altbarcmd        = "$HOME/dwm/bar.sh & "; /* Alternate bar launch command */
+static const char *altbarcmd        = "$HOME/dwm/barscripts/runbar.sh & "; /* Alternate bar launch command */
 static const unsigned int gappx     = 0;        /* gaps between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int snap      = 0;       /* snap pixel */
 static const char *fonts[]          = { "terminus:size=20", "font-awesome:size=20", "noto-fonts-emoji:size=20", "ttf-joypixels:size=20"  };
 static const char dmenufont[]       = "terminus:size=20";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#0babbb";
+static const char col_cyan[]        = "#94079a";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -108,7 +108,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("rbash")}, //custom keybind
-	{ MODKEY,                       XK_F4,      spawn,         SHCMD("playerctl play-pause")}, //custom keybind
+	{ MODKEY,                       XK_F4,     spawn,          SHCMD("playerctl play-pause")}, //custom keybind
+	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")}, //custom keybind
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
