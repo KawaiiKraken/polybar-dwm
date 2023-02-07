@@ -45,7 +45,7 @@ the DISPLAY environment variable is set correctly, e.g.:
 
 OR
 
-use xrandr --output in .xinitrc (might not work in all dispaly configs)
+use xrandr --output in .xinitrc (might not work in all display configs)
 
 
 Running polybar
