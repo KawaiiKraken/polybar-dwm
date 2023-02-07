@@ -1,5 +1,5 @@
 # polybar-dwm - dwm with polybar support*
-patched to work with polybar-dwm-module which you can find here
+*patched to work with polybar-dwm-module which you can find here
  https://github.com/mihirlad55/polybar-dwm-module
 
 ![screenshot](https://github.com/KawaiiKraken/polybar-dwm/blob/master/myconfig.png "My Config")
