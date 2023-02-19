@@ -3,13 +3,12 @@ while ((x < 2))
   do
     ((x++))
   if pgrep '^polybar' > /dev/null; then
-  pkill --signal sigterm polybar & sleep 1
+  pkill --signal sigterm polybar 
 elif type "xrandr"; then
   for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload mainbar & MONITOR=$m polybar --reload secondarybar & 
+    MONITOR=$m polybar --reload bar & MONITOR=$m polybar --reload secondarybar & 
   done
 else
-    MONITOR=$m polybar --reload mainbar & MONITOR=$m polybar --reload secondarybar & 
+    MONITOR=$m polybar --reload bar & MONITOR=$m polybar --reload secondarybar & 
 fi
-sleep 0.5
 done

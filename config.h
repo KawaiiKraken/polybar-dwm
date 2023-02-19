@@ -10,7 +10,7 @@ static const char *alttrayname      = "tray";    /* Polybar tray instance name *
 static const char *altbarcmd        = "$HOME/dwm/barscripts/runbar.sh & "; /* Alternate bar launch command */
 static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
-static const char *fonts[]          = { "terminus:size=20", "font-awesome:size=20", "noto-fonts-emoji:size=20", "ttf-joypixels:size=20"  };
+static const char *fonts[]          = { "terminus:size=20", "font-awesome:size=20", "noto-fonts-emoji:size=20", "siji-ttf:size=20", "ttf-unifont:size=20", "ttf-joypixels:size=20"  };
 static const char dmenufont[]       = "terminus:size=20";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -102,6 +102,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc -f /home/kraken/screenshots/")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc toggle")}, //custom keybind
 	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc next")}, //custom keybind
+	{ MODKEY|ShiftMask,             XK_comma,  spawn,          SHCMD("mpc prev")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("mpc volume +10")}, //custom keybind
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("mpc volume -10")}, //custom keybind
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases")}, //custom keybind
