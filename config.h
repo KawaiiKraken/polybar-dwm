@@ -7,7 +7,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int usealtbar          = 1;        /* 1 means use non-dwm status bar */
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
-static const char *altbarcmd        = "$HOME/dwm/barscripts/runbar.sh & "; /* Alternate bar launch command */
+static const char *altbarcmd        = "sleep 0.3 && $HOME/dwm/barscripts/runbar.sh & "; /* Alternate bar launch command */
 static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
 static const char *fonts[]          = { "terminus:size=20", "font-awesome:size=20", "noto-fonts-emoji:size=20", "siji-ttf:size=20", "ttf-unifont:size=20", "ttf-joypixels:size=20"  };
@@ -99,18 +99,16 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,             	        XK_n, shiftview,           {.i = +1 } },
 	{ MODKEY,	                      XK_b, shiftview,           {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc -f /home/kraken/screenshots/")}, //custom keybind
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc toggle")}, //custom keybind
-	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc next")}, //custom keybind
-	{ MODKEY|ShiftMask,             XK_comma,  spawn,          SHCMD("mpc prev")}, //custom keybind
-	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("mpc volume +10")}, //custom keybind
-	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("mpc volume -10")}, //custom keybind
-	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases")}, //custom keybind
-	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, //custom keybind
-	{ MODKEY,                       XK_d,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, //custom keybind
-	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("rbash")}, //custom keybind
-	{ MODKEY,                       XK_F4,     spawn,          SHCMD("playerctl play-pause")}, //custom keybind
-	{ MODKEY|ShiftMask,             XK_l,      spawn,          SHCMD("slock")}, //custom keybind
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("gscreenshot -sc -f /home/kraken/screenshots/")}, // custom
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("mpc toggle")}, // custom
+	{ MODKEY,                       XK_comma,  spawn,          SHCMD("mpc next")}, // custom
+	{ MODKEY|ShiftMask,             XK_comma,  spawn,          SHCMD("mpc prev")}, // custom
+	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("mpc volume +10")}, // custom
+	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("mpc volume -10")}, // custom
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases-st")}, // custom
+	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, // custom
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, // custom
+	{ MODKEY,                       XK_F4,     spawn,          SHCMD("playerctl play-pause")}, // custom
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
