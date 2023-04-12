@@ -84,7 +84,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
-	/*{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} }, */
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	/*{ MODKEY,                       XK_space,  setlayout,      {0} },*/
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
@@ -105,7 +105,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,  spawn,          SHCMD("mpc prev")}, // custom
 	{ MODKEY|ShiftMask,             XK_Up,     spawn,          SHCMD("mpc volume +10")}, // custom
 	{ MODKEY|ShiftMask,             XK_Down,   spawn,          SHCMD("mpc volume -10")}, // custom
-	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases-st")}, // custom
+	{ MODKEY,                       XK_o,      spawn,          SHCMD("$HOME/scripts/dmenu-aliases-bash")}, // custom
 	{ MODKEY,                       XK_u,      spawn,          SHCMD("xdotool type $(grep -v '^#' ~/.snippets | dmenu -i -l 20 | cut -d' ' -f1)")}, // custom
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          SHCMD("$HOME/scripts/addsnippet")}, // custom
 	{ MODKEY,                       XK_F4,     spawn,          SHCMD("playerctl play-pause")}, // custom
