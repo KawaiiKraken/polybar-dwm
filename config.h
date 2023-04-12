@@ -10,6 +10,7 @@ static const char *alttrayname      = "tray";    /* Polybar tray instance name *
 static const char *altbarcmd        = "sleep 0.3 && $HOME/dwm/barscripts/runbar.sh & "; /* Alternate bar launch command */
 static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 0;       /* snap pixel */
+static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const char *fonts[]          = { "terminus:size=20", "font-awesome:size=20", "noto-fonts-emoji:size=20", "siji-ttf:size=20", "ttf-unifont:size=20", "ttf-joypixels:size=20"  };
 static const char dmenufont[]       = "terminus:size=20";
 static const char col_gray1[]       = "#222222";
@@ -31,9 +32,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Librewolf",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
+	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Librewolf", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "St",      NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */

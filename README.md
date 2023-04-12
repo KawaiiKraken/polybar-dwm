@@ -12,6 +12,7 @@
 - restoreafterrestart
 - noborder 
 - tagshift
+- swallow
 - anybar-togglebar (custom patch)
 - a few minor changes to prevent weird behaviour with polybar
 
